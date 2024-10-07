@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: black;
+  overflow: auto;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the particles are behind the content */
+}
+
+header {
+  position: relative;
+  z-index: 1; /* Ensure the header is above the particles */
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-size: 1.2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+main {
+  position: relative;
+  z-index: 1; /* Ensure the main content is above the particles */
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about {
+  text-align: center;
+}
+
+.projects {
+  text-align: center;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s, background-color 0.3s;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+}
+#p1 {
+  text-align: justify;
+}
+
+#education {
+  padding: 40px;
+  background-color: #ccdce33f; /* Ensure background is light */
+  text-align: center;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Allow wrapping */
+  margin: 20px 0;
+}
+
+.education-item {
+  background-color: rgba(255, 255, 255, 0.769); /* Slightly transparent white */
+  border: 2px solid rgba(52, 152, 219, 0.85); /* Slightly transparent blue */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+.education-item:hover {
+  transform: translateY(-35px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(55, 0, 255, 0.852); /* Enhanced shadow on hover */
+}
+
+.education-item h3 {
+  color: #3c6783; /* Heading color */
+  font-size: 1.8em;
+}
+
+.education-item p {
+  margin: 5px 0;
+  color: #000000; /* Text color */
+}
+
+.percentage {
+  font-size: 2em; /* Increase font size for emphasis */
+  color: #3498db; /* Color for the percentage */
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s; /* Smooth transition */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative; /* Position relative for any absolute elements */
+}
+
+.percentage:hover {
+  color: #000000; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
+/* Footer Styles */
+footer {
+        background-color: #2c3e5068; /* Dark background color */
+        color: #ecf0f1; /* Light text color */
+        padding: 40px 0; /* Vertical padding */
+        text-align: center; /* Centered text */
+        position: relative; /* Positioning for absolute elements if needed */
+    }
+    
+    .footer-container {
+        display: flex; /* Flexbox for layout */
+        justify-content: space-between; /* Space between sections */
+        flex-wrap: wrap; /* Allow wrapping */
+        max-width: 1200px; /* Max width for the container */
+        margin: 0 auto; /* Center the container */
+        padding: 0 20px; /* Horizontal padding */
+    }
+    
+    .footer-section {
+        flex: 1; /* Flex-grow for each section */
+        min-width: 250px; /* Minimum width for sections */
+        margin: 20px; /* Margin between sections */
+        padding: 20px; /* Padding for inner content */
+        background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+        border-radius: 10px; /* Rounded corners */
+        transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
+    }
+    
+    .footer-section:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+        background-color: rgba(24, 89, 209, 0.486); /* Darker background on hover */
+    }
+    
+    .footer-section h3 {
+        color: #8cff00; /* Heading color */
+        margin-bottom: 10px; /* Spacing below headings */
+        position: relative; /* For pseudo-elements if needed */
+    }
+    
+    .footer-section h3::after {
+        content: ''; /* Decorative line */
+        display: block; /* Display as block */
+        width: 50px; /* Line width */
+        height: 3px; /* Line height */
+        background-color: #3498db; /* Line color */
+        margin: 10px auto; /* Center the line */
+    }
+    
+    .footer-section ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+    }
+    
+    .footer-section li {
+        margin: 5px 0; /* Spacing for list items */
+    }
+    
+    .footer-section a {
+        color: #ecf0f1; /* Link color */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth transition for link color */
+    }
+    
+    .footer-section a:hover {
+        color: #0096fa; /* Change link color on hover */
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid #ecf0f1; /* Top border for separation */
+        padding-top: 20px; /* Padding for spacing */
+    }
+    
+    .footer-bottom p {
+        margin: 0; /* Remove default margin */
+        font-size: 0.9em; /* Smaller font size for copyright */
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column; /* Stack sections on smaller screens */
+            align-items: center; /* Center items */
+        }
+    
+        .footer-section {
+            margin: 10px 0; /* Adjust margins for stacked sections */
+            width: 80%; /* Width for smaller screens */
+        }
+    }
+    
+
+
+
+    #photo-gallery {
+        padding: 40px 20px; /* Vertical and horizontal padding */
+        text-align: center; /* Center text */
+    }
+    
+    #photo-gallery h2 {
+        color: #ffffff; /* Dark heading color */
+        margin-bottom: 20px; /* Space below heading */
+    }
+    
+    .gallery-container {
+        display: flex; /* Flexbox for layout */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center items */
+        gap: 20px; /* Space between items */
+        max-width: 1200px; /* Max width for the gallery */
+        margin: 0 auto; /* Center the container */
+    }
+    
+    .gallery-item {
+        flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+        border: 2px solid #3498db; /* Border color */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Hide overflow */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05); /* Scale up on hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    }
+    
+    .gallery-item img {
+        width: 100%; /* Responsive image width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove inline spacing */
+    }
+    
+    .gallery-item p {
+        margin: 10px 0; /* Space above and below caption */
+        color: #d7dce1; /* Caption text color */
+        font-size: 0.9em; /* Font size for captions */
+    }
+    
+
+
